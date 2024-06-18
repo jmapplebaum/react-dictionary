@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Results from "./Results";
 import "./Search.css";
 
 export default function Search() {
   let [keyword, setKeyword] = useState("");
+  let [results, setResults] = useState(null);
 
   function handleResponse(response) {
     console.log(response.data);
+    setResults(response.data);
   }
 
   function handleSearch(event) {
@@ -23,9 +26,10 @@ export default function Search() {
 
   return (
     <div className="Search">
-      <form onSubmit={handleSearch}>
+      <form onSubmit={handleSearch} className="text-center">
         <input type="search" onChange={keywordChange} />
       </form>
+      <Results results={results} />
     </div>
   );
 }
