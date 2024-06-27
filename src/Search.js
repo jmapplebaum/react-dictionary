@@ -11,6 +11,7 @@ export default function Search() {
     console.log(response.data);
     setResults(response.data[0]);
   }
+
   function search() {
     const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(apiUrl).then(handleResponse);
