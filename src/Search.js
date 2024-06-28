@@ -10,11 +10,9 @@ export default function Search() {
   let [photos, setPhotos] = useState(null);
 
   function handleResponse(response) {
-    console.log(response.data);
     setResults(response.data[0]);
   }
   function handlePexelsResponse(response) {
-    console.log(response.data);
     setPhotos(response.data.photos);
   }
 
