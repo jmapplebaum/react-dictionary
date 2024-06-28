@@ -4,7 +4,7 @@ import Results from "./Results";
 import Photos from "./Photos";
 
 export default function Search() {
-  let [keyword, setKeyword] = useState("dictionary");
+  let [keyword, setKeyword] = useState("developer");
   let [results, setResults] = useState(null);
   let [loaded, setLoaded] = useState(false);
   let [photos, setPhotos] = useState(null);
